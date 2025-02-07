@@ -22,6 +22,8 @@ noButton.addEventListener("click", function () {
     resizeYesButton();
     updateNoButtonText();
     if (noCount === MAX_IMAGES) {
+       var yy = document.getElementById("myAudiono");
+      yy.play();
       play = false;
     }
   }
