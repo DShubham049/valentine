@@ -30,6 +30,8 @@ noButton.addEventListener("click", function () {
 });
 
 function handleYesClick() {
+  var yy = document.getElementById("myAudiono");
+  yy.pause();
   swal("Thank You!", "I love Uhh!", "success");
   // swal({
   //     title: "I love Uhh!",
