@@ -24,13 +24,26 @@ noButton.addEventListener("click", function () {
     if (noCount === MAX_IMAGES) {
       play = false;
     }
-  } 
+  }
 });
 
 function handleYesClick() {
-   swal("I LOVE YOU !!", "Thank You!", "success");  
+  swal("Thank You!", "I love Uhh!", "success");
+  // swal({
+  //     title: "I love Uhh!",
+  //     text: '<img src="img/love.jpg" style="display:block;">',
+  //     html: true,
+  // });
+  // var options = {
+  //     title: 'I Love uhh !',
+  //     text: '<img width="250" height="200" src="img/download.jpg">',
+  //     html: true
+  // };
+  // swal(options);
   titleElement.innerHTML = "Yayyy!! :3";
   buttonsContainer.classList.add("hidden");
+  var x = document.getElementById("myAudioyes");
+  x.play();
   changeImage("yes");
 }
 
@@ -57,7 +70,8 @@ function generateMessage(noCount) {
 }
 
 function changeImage(image) {
-  catImg.src = `img/download.jpg`;
+  //catImg.src = `img/cat-${image}.jpg`;
+  catImg.src = `img/cat-${image}.jpg`;
 }
 
 function updateNoButtonText() {
