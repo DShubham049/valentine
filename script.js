@@ -22,16 +22,14 @@ noButton.addEventListener("click", function () {
     resizeYesButton();
     updateNoButtonText();
     if (noCount === MAX_IMAGES) {
-       var yy = document.getElementById("myAudiono");
-      yy.play();
-      play = false;
-    }
+    //   var yy = document.getElementById("myAudiono");
+    //   yy.play();
+       play = false;
+     }
   }
 });
 
 function handleYesClick() {
-  var yy = document.getElementById("myAudiono");
-  yy.pause();
   swal("Thank You!", "I love Uhh!", "success");
   // swal({
   //     title: "I love Uhh!",
@@ -46,6 +44,8 @@ function handleYesClick() {
   // swal(options);
   titleElement.innerHTML = "Yayyy!! :3";
   buttonsContainer.classList.add("hidden");
+  var yy = document.getElementById("myAudiono");
+  yy.pause();
   var x = document.getElementById("myAudioyes");
   x.play();
   changeImage("yes");
@@ -80,4 +80,11 @@ function changeImage(image) {
 
 function updateNoButtonText() {
   noButton.innerHTML = generateMessage(noCount);
+  if(generateMessage(noCount)=="I'm gonna cry..."){
+    var yy = document.getElementById("myAudiono");
+    yy.pause();
+    var x1 = document.getElementById("myAudioCry");
+    x1.play();
+  }
 }
+ 
